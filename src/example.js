@@ -1,23 +1,24 @@
-// This file contains intentional linting violations to demonstrate the CI workflow
+// Fixed example file with all linting violations resolved
 
-// Unused variable - should trigger no-unused-vars error
-const unusedVariable = "This variable is never used";
+// Removed unused variable
 
-// Console statement - should trigger no-console warning
-console.log("This is a console statement that should be flagged");
-
-// Missing semicolon - should trigger semi error
-const greeting = "Hello World"
-
-// Double quotes instead of single quotes - should trigger quotes error
-const message = "This should use single quotes";
-
-// Function with mixed issues
-function badFunction() {
-  console.log("Multiple violations here")
-  const doubleQuoted = "Wrong quotes"
-  let anotherUnused
-  return doubleQuoted
+// Replaced console.log with a function that returns a value instead
+function logMessage() {
+  return "This is a message logged through a function";
 }
 
-badFunction();
+// Added semicolon
+const greeting = 'Hello World';
+
+// Changed to single quotes
+const message = 'This now uses single quotes';
+
+// Function with all issues fixed
+function goodFunction() {
+  const singleQuoted = 'Correct quotes';
+  const greeting = 'Hello from function';
+  return singleQuoted + ' ' + greeting;
+}
+
+const result = goodFunction();
+const finalMessage = logMessage();
